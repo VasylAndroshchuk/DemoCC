@@ -27,5 +27,4 @@ kubectl port-forward deployment/prometheus-grafana 3000
 ця команда перенаправить трафік на localhost:3000
 
 Login: admin 
-
 Password: prom-operator
