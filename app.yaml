@@ -18,8 +18,8 @@ spec:
     spec:
       containers:
       - name: hello-whale-container
-        image: androshchuk/hellowhale:latest
-        imagePullPolicy: Always
+        image: androshchuk/hellowhale:latest  # Цей образ ми отримали внаслідок виконання команди: myapp = docker.build 
+        imagePullPolicy: Always               # яка описана в Jekinsfile
         ports:
         - containerPort: 80
 ---
