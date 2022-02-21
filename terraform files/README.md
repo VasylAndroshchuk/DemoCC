@@ -15,8 +15,8 @@
    aws eks --region $(terraform output -raw region) update-kubeconfig --name $(terraform output -raw cluster_name)
 
 # Встановлення моніторингу
-Для монітрингу буде використовуватися стек Prometheus-Grafana. Установка стеку відбувається за допомогою комади: 
-helm install prometheus stable/prometheus-operator
+Для монітрингу буде використовуватися стек Prometheus-Grafana. Установка стеку відбувається за допомогою комади:     
+   helm install prometheus stable/prometheus-operator
 Оскільки тип сервісу для моніторингу ClusterIP, його трафік доступний тільки в середині кластеру. щоб отримати доступ з браузеру необхідно виконати команду:  
 kubectl port-forward deployment/prometheus-grafana 3000  
 ця команда перенаправить трафік на localhost:3000
