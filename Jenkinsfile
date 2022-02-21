@@ -5,13 +5,13 @@ pipeline {
   stages {
 
     
-      stage("Build image") {
-            steps {
-                script {
-                    myapp = docker.build("androshchuk/hellowhale:${env.BUILD_ID}") /*Скрипт для сворення контейнера і параметри куди його запушити*/
-                }
+      stage('Build image') {
+         steps{
+            script {
+             dockerImage = docker.build("androshchuk/hellowhale:${env.BUILD_ID}")
             }
-        }
+         }
+      }
     
       stage("Push image") {
             steps {
